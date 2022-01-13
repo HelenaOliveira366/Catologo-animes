@@ -59,23 +59,24 @@ body{
 }
 
 /*-------------------------------CABEÇALHO-------------------------------*/
-header{
+header nav{
     padding: 30px 0;
+    /*Centralizar o conteúdo*/
+    /*Estruturar um elemento abaixo do outro*/
+    display: block;
+    justify-content: center;
+    /*Alinhar os textos*/
+    text-align: center;
+    /*O "align-items: center" serve pera alinhamento no eixo x*/
 }
 
-#title-page{
-    text-align: center;
-    /*Fonte do projeto*/
+header nav #title-page{
+    /*Fonte do título do projeto*/
     font-size: 50px;
 }
 
-.slogan{
+header nav .slogan{
     color: var(--color-red-gradient);
-    /*Centralizar o conteúdo*/
-    display: flex;
-    justify-content: center;
-    /*O "align-items: center" serve pera alinhamento no eixo x*/
-
     font-size: 16px;
 
     padding: 8px; /*0.50rem*/
@@ -83,8 +84,8 @@ header{
 
 .navbar_item{
     text-decoration: none;
-    
     color: var(--color-yellow-gradient);
+
     padding: 8px; /*0.50rem*/
     border: 2px solid var(--color-yellow-gradient);
     border-radius: 8px; /*0.50rem*/
@@ -184,13 +185,18 @@ hr{
 
 /*-------------------------------RODAPÉ-------------------------------*/
 footer{
-    padding: 2rem;
-}
+    padding: 32px;
 
-footer h3{
+    /*Posicionar as caixas uma abaixo da outra*/
+    display: block;
+    justify-content: center;
+    /*Alinhar textos ao centro*/
     text-align: center;
+
+    color: var(--color-red-gradient);
 }
 
+/*Brackpoints para resposividade*/
 @media (max-width: 1200px){
     .container{
         /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
@@ -232,24 +238,3 @@ footer h3{
         grid-column-gap: 16px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.container .card .content p{
-    font-size: 12px;
-    font-weight: 300;
-
-    Centralizar o texto
-    text-align: justify;
-}*/
