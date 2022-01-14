@@ -196,10 +196,12 @@ footer{
     color: var(--color-red-gradient);
 }
 
+/*----------------RESPONSIVIDADE----------------*/
+
 /*Brackpoints para resposividade*/
 @media (max-width: 1200px){
     .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 5 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(5, 1fr);
         grid-column-gap: 16px;
     }
@@ -207,15 +209,15 @@ footer{
 
 @media (max-width: 1024px){
     .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(4, 1fr);
+        /*O layout será estruturado em 3 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 16px;
     }
 }
 
 @media (max-width: 768px){
     .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 3 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 16px;
 
@@ -225,7 +227,7 @@ footer{
 
 @media (max-width: 640px){
     .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 2 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 16px;
     }
@@ -233,7 +235,7 @@ footer{
 
 @media (max-width: 480px){
     .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 1 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(1, 1fr);
         grid-column-gap: 16px;
     }
