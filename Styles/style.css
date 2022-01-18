@@ -52,7 +52,6 @@
 
 body{
     background: var(--color-background);
-    width: 100vw;
 
     /*Tirar o scroll do eixo X*/
     overflow-x: hidden;
@@ -122,7 +121,7 @@ hr{
 
 /*-------------------------------CARDS-------------------------------*/
 .container{
-    padding: 32px; /*2rem*/
+    padding: 32px 16px; /*2rem*/
 
     /*------GRID------*/
     /*Estruturação do layout em CSS Grid*/
@@ -131,7 +130,7 @@ hr{
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 16px;
     /*O layout será estruturado em linhas com espaçamento de 25px entre elas*/
-    grid-row-gap: 25px;
+    grid-row-gap: 30px;
 
     align-items: center;
     justify-items: center;
@@ -169,6 +168,8 @@ hr{
 
 .container .card .content .readMore{
     text-decoration: none;
+    cursor: pointer;
+
     border-radius: 8px; /*0.50rem*/
     padding: 8px;
     color: var(--color-white);
@@ -196,12 +197,14 @@ footer{
     color: var(--color-red-gradient);
 }
 
-/*----------------RESPONSIVIDADE----------------*/
+footer h3{
+    color: var(--color-yellow-gradient)
+}
 
-/*Brackpoints para resposividade*/
+/*----------------RESPONSIVIDADE----------------*/
 @media (max-width: 1200px){
     .container{
-        /*O layout será estruturado em 5 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(5, 1fr);
         grid-column-gap: 16px;
     }
@@ -209,7 +212,7 @@ footer{
 
 @media (max-width: 1024px){
     .container{
-        /*O layout será estruturado em 3 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 16px;
     }
@@ -217,7 +220,7 @@ footer{
 
 @media (max-width: 768px){
     .container{
-        /*O layout será estruturado em 3 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 16px;
 
@@ -227,7 +230,7 @@ footer{
 
 @media (max-width: 640px){
     .container{
-        /*O layout será estruturado em 2 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 16px;
     }
@@ -235,7 +238,7 @@ footer{
 
 @media (max-width: 480px){
     .container{
-        /*O layout será estruturado em 1 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(1, 1fr);
         grid-column-gap: 16px;
     }
