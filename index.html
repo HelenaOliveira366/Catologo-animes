@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="Styles/style.css">
 
         <!--Importação do JS-->
-        <!--<script src="script.js" defer></script>-->
+        <script src="/Scripts/scriptModal.js" defer></script>
 
         <!--Ícone da página-->
         <link rel="icon" type="image/png" href="Images/logoCatAnime.png"/>
@@ -48,10 +48,17 @@
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Dr Stone</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->
-                        <button class="readMore gradient">Ler mais</button>
+                        <button class="readMore gradient" onclick="Modal.open()">Ler mais</button>
+                    </div>
+                    <!-------------MODAL------------->
+                    <!--Caixa transparente-->
+                    <div class="modal-container">
+                        <!--Campo da descrição em si-->
+                        <div class="modal">
+                            <button class="close-btn" onclick="Modal.close()">X</button>
+                            <h2 class="nameAnime">Dr Stone</h2>
+                            <p class="sinopse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -62,9 +69,7 @@
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Yuukoku No Moriarty</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->                        <button class="readMore gradient">Ler mais</button>
+                        <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
 
@@ -75,31 +80,23 @@
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Kimetsu No Yaiba</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->
                         <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
 
                 <!--Estrutura HTML do card-->
                 <div class="card">
-                    <!--Definir medidas para as imagens no css e deixar apenas a classe "imageCard", pois a classe deve estar na div, não na imagem-->
                     <div class="image">
                         <img src="Images/RGK.jpeg" alt="">
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Rikei Ga Koi</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->
                         <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
                 
                 <!--Estrutura HTML do card-->
                 <div class="card">
-                    <!--Definir medidas para as imagens no css e deixar apenas a classe "imageCard", pois a classe deve estar na div, não na imagem-->
                     <div class="image">
                         <img src="Images/SNK.jpeg" alt="">
                     </div>
@@ -116,9 +113,7 @@
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Code Geass</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->                        <button class="readMore gradient">Ler mais</button>
+                        <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
 
@@ -128,40 +123,29 @@
                         <img src="Images/DP.jpeg" alt="">
                     </div>
                     <div class="content">
-                        <h2 class="nameAnime">Death Parade</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->
+                        <h2 class="nameAnime">Death Parade</h2>                       
                         <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
 
                 <!--Estrutura HTML do card-->
                 <div class="card">
-                    <!--Definir medidas para as imagens no css e deixar apenas a classe "imageCard", pois a classe deve estar na div, não na imagem-->
                     <div class="image">
                         <img src="Images/KS.jpeg" alt="">
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Kaguya-sama</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->
                         <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>  
                 
                 <!--Estrutura HTML do card-->
                 <div class="card">
-                    <!--Definir medidas para as imagens no css e deixar apenas a classe "imageCard", pois a classe deve estar na div, não na imagem-->
                     <div class="image">
                         <img src="Images/TNK.jpeg" alt="">
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Tenki No Ko</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->
                         <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
@@ -173,9 +157,7 @@
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Oregairu</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->                        <button class="readMore gradient">Ler mais</button>
+                        <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
 
@@ -186,16 +168,12 @@
                     </div>
                     <div class="content">
                         <h2 class="nameAnime">Koe No Katachi</h2>
-                        <!--
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        -->
                         <button class="readMore gradient">Ler mais</button>
                     </div>
                 </div>
 
                 <!--Estrutura HTML do card-->
                 <div class="card">
-                    <!--Definir medidas para as imagens no css e deixar apenas a classe "imageCard", pois a classe deve estar na div, não na imagem-->
                     <div class="image">
                         <img src="Images/R2.jpeg" alt="">
                     </div>
