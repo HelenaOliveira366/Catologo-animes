@@ -121,7 +121,7 @@ hr{
 
 /*-------------------------------CARDS-------------------------------*/
 .container{
-    padding: 32px 16px; /*2rem*/
+    padding: 32px 11px 32px 16px; /*O lado direito é 5px a menos por que a scrollbar toma 5px de seu tamanho*/
 
     /*------GRID------*/
     /*Estruturação do layout em CSS Grid*/
@@ -242,4 +242,76 @@ footer h3{
         grid-template-columns: repeat(1, 1fr);
         grid-column-gap: 16px;
     }
+}
+
+/*Caixa que abriga o modal*/
+.modal-container{
+    /*Ocupar toda a tela do dispositivo*/
+    width: 100vw;
+    height: 100vh;
+    min-width: 400px;
+    /*Deixar a tela com um fundo transparente escuro*/
+    background: rgba(0, 0, 0, 0.5);
+    /*Posicionar a caixa em toda a tela*/
+    position: fixed;
+    /*A caixa vai começar da esquerda , de cima para baixo, desde o 1°pixel*/
+    left: 0px;
+    top: 0px;
+    /*Posicionar o modal sobre todas as demais caixas*/
+    z-index: 2;
+    /*Centralizar o conteúdo do modal*/
+    display: flex;
+    justify-content: center; /*centalizar no eixo X*/
+    align-items: center; /*centralizar no eixo Y*/
+
+    /*Para que se possa posicionar elementos filhos dentro do modal, define-a como tendo posição relativa e seus filhos com posição absoluta*/
+    /*position: relative;*/
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*Quando a função "open" for chamada, a classe "active" será adicionada ao seletor que contém a classe "modal-container" e será visível para o usuário*/
+.modal-container.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*É o próprio modal*/
+.modal-container .modal{
+    /*Posição absoluta é necessária para posicionar os elementos do modal corretamente*/
+    position: absolute;
+
+    background: var(--color-white);
+
+    width: 50%;
+    height: 30%;
+
+    padding: 16px;
+}
+
+/*Botão de fechar do modal*/
+.modal-container .modal .close-btn{
+    /*Posição absoluta é necessária para posicionar os elementos do modal corretamente*/
+    position: absolute;
+    padding: 10px;
+
+    background: var(--color-white);
+    border: none;
+    cursor: pointer;
+    
+    color: var(--color-red-gradient);
+    font-size: 16px;
+    font-weight: 900;
+    
+    right: 3%;
+}
+
+.modal-container .modal img{
+    position: absolute;
+}
+
+.modal-container .modal p{
+    justify-content: justify;
+    font-size: 16px;
 }
