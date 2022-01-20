@@ -316,7 +316,7 @@ footer h3{
         grid-column-gap: 16px;
     }
     
-    .modal-container{
+    .modal-container .modal{
         width: 90%;
         height: 60%;
     }
