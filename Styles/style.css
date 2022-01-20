@@ -249,7 +249,7 @@ footer h3{
     /*Ocupar toda a tela do dispositivo*/
     width: 100vw;
     height: 100vh;
-    min-width: 400px;
+    min-width: 450px;
     /*Deixar a tela com um fundo transparente escuro*/
     background: rgba(0, 0, 0, 0.5);
     /*Posicionar a caixa em toda a tela*/
