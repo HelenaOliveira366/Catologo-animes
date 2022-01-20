@@ -201,55 +201,13 @@ footer h3{
     color: var(--color-yellow-gradient)
 }
 
-/*----------------RESPONSIVIDADE----------------*/
-@media (max-width: 1200px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 16px;
-    }
-}
 
-@media (max-width: 1024px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-
-@media (max-width: 768px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-
-        overflow-x: hidden;
-    }
-}
-
-@media (max-width: 640px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-
-@media (max-width: 480px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(1, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-
+/*-------------------------------MODAL-------------------------------*/
 /*Caixa que abriga o modal*/
 .modal-container{
     /*Ocupar toda a tela do dispositivo*/
     width: 100vw;
     height: 100vh;
-    min-width: 450px;
     /*Deixar a tela com um fundo transparente escuro*/
     background: rgba(0, 0, 0, 0.5);
     /*Posicionar a caixa em toda a tela*/
@@ -314,4 +272,52 @@ footer h3{
 .modal-container .modal p{
     justify-content: justify;
     font-size: 16px;
+}
+
+/*----------------RESPONSIVIDADE----------------*/
+@media (max-width: 1200px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+
+@media (max-width: 1024px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 640px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 16px;
+    }
+    
+    .modal-container{
+        width: 90%;
+        height: 60%;
+    }
 }
