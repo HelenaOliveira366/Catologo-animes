@@ -281,6 +281,12 @@ footer h3{
         grid-template-columns: repeat(5, 1fr);
         grid-column-gap: 16px;
     }
+    
+    /*Tamanho do modal*/
+    .modal-container .modal{
+        width: 50%;
+        height: 30%;
+    }
 }
 
 @media (max-width: 1024px){
@@ -288,6 +294,12 @@ footer h3{
         /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 16px;
+    }
+    
+    /*Tamanho do modal*/
+    .modal-container .modal{
+        width: 60%;
+        height: 30%;
     }
 }
 
@@ -299,6 +311,12 @@ footer h3{
 
         overflow-x: hidden;
     }
+    
+    /*Tamanho do modal*/
+    .modal-container .modal{
+        width: 60%;
+        height: 40%;
+    }
 }
 
 @media (max-width: 640px){
@@ -306,6 +324,12 @@ footer h3{
         /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 16px;
+    }
+    
+    /*Tamanho do modal*/
+    .modal-container .modal{
+        width: 75%;
+        height: 30%;
     }
 }
 
@@ -316,8 +340,9 @@ footer h3{
         grid-column-gap: 16px;
     }
     
+    /*Tamanho do modal*/
     .modal-container .modal{
-        width: 90%;
-        height: 60%;
+        width: 75%;
+        height: 55%;
     }
 }
