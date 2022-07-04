@@ -21,6 +21,10 @@
     border: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 /*Gradiente*/
 .gradient{
     background-image: linear-gradient(45deg, var(--color-yellow-gradient), var(--color-orange-gradient), var(--color-red-gradient));
@@ -55,6 +59,7 @@ body{
 
     /*Tirar o scroll do eixo X*/
     overflow-x: hidden;
+    margin-inline: auto;
 }
 
 /*-------------------------------CABEÇALHO-------------------------------*/
@@ -97,7 +102,7 @@ header nav .slogan{
 
 ul{
     padding: 16px; /*1rem*/
-    /*Remover as boliinhas do elemento da lista*/
+    /*Remover as bolinhas do elemento da lista*/
     list-style: none;
 
     /*Centralizar os itens*/
@@ -115,7 +120,7 @@ li{
 hr{
     border: none;
     height: 1px;
-    min-width: 100%;
+    width: 100%;
     background-color: var(--color-red-gradient);
 }
 
@@ -201,13 +206,55 @@ footer h3{
     color: var(--color-yellow-gradient)
 }
 
+/*----------------RESPONSIVIDADE----------------*/
+@media (max-width: 1200px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 16px;
+    }
+}
 
-/*-------------------------------MODAL-------------------------------*/
+@media (max-width: 1024px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 640px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+
 /*Caixa que abriga o modal*/
 .modal-container{
     /*Ocupar toda a tela do dispositivo*/
     width: 100vw;
     height: 100vh;
+    min-width: 400px;
     /*Deixar a tela com um fundo transparente escuro*/
     background: rgba(0, 0, 0, 0.5);
     /*Posicionar a caixa em toda a tela*/
@@ -269,10 +316,7 @@ footer h3{
     position: absolute;
 }
 
-.modal-container .modal p{
-    justify-content: justify;
-    font-size: 16px;
-}
+/*FAZER UM CÁLCULO PARA DEFINIR A ALTURA DO MODAL PARA CADA TAMANHO DE TELA*/
 
 .modal-container .modal .sinopse{
     text-align: justify;
@@ -290,77 +334,4 @@ footer h3{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/*----------------RESPONSIVIDADE----------------*/
-@media (max-width: 1200px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 16px;
-    }
-    
-    /*Tamanho do modal*/
-    .modal-container .modal{
-        width: 50%;
-        height: 30%;
-    }
-}
-
-@media (max-width: 1024px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-    }
-    
-    /*Tamanho do modal*/
-    .modal-container .modal{
-        width: 60%;
-        height: 30%;
-    }
-}
-
-@media (max-width: 768px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-
-        overflow-x: hidden;
-    }
-    
-    /*Tamanho do modal*/
-    .modal-container .modal{
-        width: 60%;
-        height: 40%;
-    }
-}
-
-@media (max-width: 640px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 16px;
-    }
-    
-    /*Tamanho do modal*/
-    .modal-container .modal{
-        width: 75%;
-        height: 30%;
-    }
-}
-
-@media (max-width: 480px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(1, 1fr);
-        grid-column-gap: 16px;
-    }
-    
-    /*Tamanho do modal*/
-    .modal-container .modal{
-        width: 75%;
-        height: 55%;
-    }
 }
