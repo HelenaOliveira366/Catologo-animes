@@ -274,6 +274,24 @@ footer h3{
     font-size: 16px;
 }
 
+.modal-container .modal .sinopse{
+    text-align: justify;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.modal-container .modal .btn-wacth{
+    background-color: var(--color-red-gradient);
+    color: var(--color-white);
+    
+    padding: 8px;
+    width: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*----------------RESPONSIVIDADE----------------*/
 @media (max-width: 1200px){
     .container{
