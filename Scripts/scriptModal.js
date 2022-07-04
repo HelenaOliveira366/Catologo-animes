@@ -10,5 +10,3 @@ const Modal = {
         document.querySelector(".modal-container").classList.remove("active")
     }
 }
-
-//Acho que pra trabalhar com a sinopse dos outros animes, precisarei de um array
