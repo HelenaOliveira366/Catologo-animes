@@ -2,6 +2,12 @@
 1rem = 16px
 */
 
+/*
+px - Medida absoluta, não muda de acordo com as especificações do dispositivo
+em - Relativo ao tamanho da fonte do elemento - 2em = 2 vexes o tamanho do elemento
+rem - Relativo ao font-size do elemento root - do pai
+*/
+
 :root{
     /*Variáveis*/
     --color-yellow-gradient: #FFCA03;
@@ -12,12 +18,13 @@
     --color-background: #191A19;
 
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
 }
 
 /*Zerar as configurações padrões do CSS*/
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     border: border-box;
 }
 
@@ -41,7 +48,7 @@ a{
 /*--------------------------SCROLLBAR---------------------*/
 /*Largura da área total da scrollbar*/
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 0.2rem;
 }
 
 /*Cor da área de trás, sem a barra*/
@@ -64,7 +71,7 @@ body{
 
 /*-------------------------------CABEÇALHO-------------------------------*/
 header nav{
-    padding: 30px 0;
+    padding: 3rem 0;
     /*Centralizar o conteúdo*/
     /*Estruturar um elemento abaixo do outro*/
     display: block;
@@ -76,23 +83,23 @@ header nav{
 
 header nav #title-page{
     /*Fonte do título do projeto*/
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 header nav .slogan{
     color: var(--color-red-gradient);
-    font-size: 16px;
+    font-size: 1rem;
 
-    padding: 8px; /*0.50rem*/
+    padding: 0.5rem; /*0.50rem*/
 }
 
 .navbar_item{
     text-decoration: none;
     color: var(--color-yellow-gradient);
 
-    padding: 8px; /*0.50rem*/
+    padding: 0.5rem; /*0.50rem*/
     border: 2px solid var(--color-yellow-gradient);
-    border-radius: 8px; /*0.50rem*/
+    border-radius: 0.5rem; /*0.50rem*/
 }
 
 .navbar_item:hover{
@@ -101,7 +108,7 @@ header nav .slogan{
 }
 
 ul{
-    padding: 16px; /*1rem*/
+    padding: 1rem; /*1rem*/
     /*Remover as bolinhas do elemento da lista*/
     list-style: none;
 
@@ -114,7 +121,7 @@ ul{
 
 li{
     /*Espaçamento na vertical e horizontal respectivamente*/
-    padding: 8px; /*0.50rem*/
+    padding: 0.5rem; /*0.50rem*/
 }
 
 hr{
@@ -126,24 +133,25 @@ hr{
 
 /*-------------------------------CARDS-------------------------------*/
 .container{
-    padding: 32px 11px 32px 16px; /*O lado direito é 5px a menos por que a scrollbar toma 5px de seu tamanho*/
+    padding: 2rem 1.5rem 2rem 1rem; /*O lado direito é 5px a menos por que a scrollbar toma 5px de seu tamanho*/
 
     /*------GRID------*/
     /*Estruturação do layout em CSS Grid*/
     display: grid;
     /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 16px;
+    grid-column-gap: 1rem;
     /*O layout será estruturado em linhas com espaçamento de 25px entre elas*/
-    grid-row-gap: 30px;
+    grid-row-gap: 2rem;
 
     align-items: center;
     justify-items: center;
 }
 
+/*MEDIDA DOS CARDS - ACHO QUE ESTOU ERRANDO AQUI, PÓIS EM DETERMINADAS TELAS ELES FICAM CORTADOS, OU SEJA, MAIORES DO QUE EU QUERO*/
 .container .card{
-    width: 300px;
-    height: 275px;
+    width: 18.75rem;
+    height: 17.1875rem;
 
     background: white;
     border-radius: 0.50rem;
@@ -155,33 +163,33 @@ hr{
     justify-content: center;
     align-items: center;
 
-    margin: 16px;
+    margin: 1rem;
 }
 
 /*Definir o tamanho da imagem do card - é necessário especificar a classe da div que contém a tag da imagem e a própria tag da imagem*/
 .container .card .image img{
     /*As 3 propriedades abaixo serve para deixar as imgens resposivas, ou seja, não desfocar conforme o tamanho do card aumenta ou diminui*/
-    width: 268px;
-    height: 150px;
+    width: 16.75rem;
+    height: 9.35rem;
     object-fit: cover;
 }
 
 .container .card .content .nameAnime{
     text-align: center;
-    margin: 0 16px;
+    margin: 0 1rem;
 }
 
 .container .card .content .readMore{
     text-decoration: none;
     cursor: pointer;
 
-    border-radius: 8px; /*0.50rem*/
-    padding: 8px;
+    border-radius: 0.5rem; /*0.50rem*/
+    padding: 0.5rem;
     color: var(--color-white);
     border: none;
     /*Ocupa 100% da caixa "content"*/
     width: 50%;
-    margin: 10px 16px;
+    margin: 0.5rem 1rem;
 
     /*Centralizar o botão no eixo X*/
     left: 50%;
@@ -191,7 +199,7 @@ hr{
 
 /*-------------------------------RODAPÉ-------------------------------*/
 footer{
-    padding: 32px;
+    padding: 2rem;
 
     /*Posicionar as caixas uma abaixo da outra*/
     display: block;
@@ -206,55 +214,13 @@ footer h3{
     color: var(--color-yellow-gradient)
 }
 
-/*----------------RESPONSIVIDADE----------------*/
-@media (max-width: 1200px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-
-@media (max-width: 1024px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-
-@media (max-width: 768px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-
-        overflow-x: hidden;
-    }
-}
-
-@media (max-width: 640px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-
-@media (max-width: 480px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(1, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-
+/*-------------------------------MODAL-------------------------------*/
 /*Caixa que abriga o modal*/
 .modal-container{
     /*Ocupar toda a tela do dispositivo*/
     width: 100vw;
     height: 100vh;
-    min-width: 400px;
+    min-width: 25rem;
     /*Deixar a tela com um fundo transparente escuro*/
     background: rgba(0, 0, 0, 0.5);
     /*Posicionar a caixa em toda a tela*/
@@ -292,21 +258,21 @@ footer h3{
     width: 50%;
     height: 30%;
 
-    padding: 16px;
+    padding: 1rem;
 }
 
 /*Botão de fechar do modal*/
 .modal-container .modal .close-btn{
     /*Posição absoluta é necessária para posicionar os elementos do modal corretamente*/
     position: absolute;
-    padding: 10px;
+    padding: 0.5rem;
 
     background: var(--color-white);
     border: none;
     cursor: pointer;
     
     color: var(--color-red-gradient);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 900;
     
     right: 3%;
@@ -320,18 +286,61 @@ footer h3{
 
 .modal-container .modal .sinopse{
     text-align: justify;
-    font-size: 16px;
-    margin-bottom: 16px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 .modal-container .modal .btn-wacth{
     background-color: var(--color-red-gradient);
     color: var(--color-white);
     
-    padding: 8px;
+    padding: 0.5rem;
     width: 15%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*----------------RESPONSIVIDADE----------------*/
+@media (max-width: 1200px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (max-width: 1024px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 640px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 1rem;
+    }
 }
