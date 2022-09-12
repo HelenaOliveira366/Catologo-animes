@@ -286,10 +286,6 @@ footer h3{
     right: 3%;
 }
 
-.modal-container .modal img{
-    position: absolute;
-}
-
 /*FAZER UM CÁLCULO PARA DEFINIR A ALTURA DO MODAL PARA CADA TAMANHO DE TELA*/
 
 .modal-container .modal .sinopse{
@@ -298,7 +294,7 @@ footer h3{
     margin-bottom: 1rem;
 }
 
-.modal-container .modal .btn-wacth{
+.modal-container .modal .btn-watch{
     background-color: var(--color-red-gradient);
     color: var(--color-white);
     
