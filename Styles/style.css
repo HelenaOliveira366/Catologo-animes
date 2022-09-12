@@ -32,6 +32,11 @@ a{
     text-decoration: none;
 }
 
+body{
+    width: 100%;
+    height: 100%;
+}
+
 /*Gradiente*/
 .gradient{
     background-image: linear-gradient(45deg, var(--color-yellow-gradient), var(--color-orange-gradient), var(--color-red-gradient));
@@ -131,6 +136,9 @@ hr{
     background-color: var(--color-red-gradient);
 }
 
+/*A SOMA DOS 4 CARDS RESULTA EM UMA LARGURA MAIOR QUE A DO BODY
+- TALVEZ TENHA QUE ALTERAR AS MEDIDAS DOS CARDS NO MEDIA QUERY, POIS ESTOU ALTERANDO APENAS A QUANTIDADE DE COLUNAS*/
+
 /*-------------------------------CARDS-------------------------------*/
 .container{
     padding: 2rem 1.5rem 2rem 1rem; /*O lado direito é 5px a menos por que a scrollbar toma 5px de seu tamanho*/
@@ -139,7 +147,7 @@ hr{
     /*Estruturação do layout em CSS Grid*/
     display: grid;
     /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     grid-column-gap: 1rem;
     /*O layout será estruturado em linhas com espaçamento de 25px entre elas*/
     grid-row-gap: 2rem;
@@ -148,7 +156,7 @@ hr{
     justify-items: center;
 }
 
-/*MEDIDA DOS CARDS - ACHO QUE ESTOU ERRANDO AQUI, PÓIS EM DETERMINADAS TELAS ELES FICAM CORTADOS, OU SEJA, MAIORES DO QUE EU QUERO*/
+/*MEDIDA DOS CARDS - ACHO QUE ESTOU ERRANDO AQUI, POIS EM DETERMINADAS TELAS ELES FICAM CORTADOS, OU SEJA, MAIORES DO QUE EU QUERO*/
 .container .card{
     width: 18.75rem;
     height: 17.1875rem;
@@ -300,47 +308,4 @@ footer h3{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/*----------------RESPONSIVIDADE----------------*/
-@media (max-width: 1200px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (max-width: 1024px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (max-width: 768px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 1rem;
-
-        overflow-x: hidden;
-    }
-}
-
-@media (max-width: 640px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (max-width: 480px){
-    .container{
-        /*O layout será estruturado em 4 colunas de 1fr cada com espaçamento de 16px entre elas*/
-        grid-template-columns: repeat(1, 1fr);
-        grid-column-gap: 1rem;
-    }
 }
