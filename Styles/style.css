@@ -15,6 +15,7 @@ rem - Relativo ao font-size do elemento root - do pai
     --color-red-gradient: #F90716;
     --color-black: #000000;
     --color-white: #ffffff;
+    --color-green: #42855B;
     --color-background: #191A19;
 
     font-family: 'Poppins', sans-serif;
@@ -66,6 +67,7 @@ body{
     background: linear-gradient(45deg, var(--color-yellow-gradient), var(--color-orange-gradient), var(--color-red-gradient));    /* color of the scroll thumb */
 }
 
+/*------------------------------------------------*/
 body{
     background: var(--color-background);
 
@@ -136,9 +138,6 @@ hr{
     background-color: var(--color-red-gradient);
 }
 
-/*A SOMA DOS 4 CARDS RESULTA EM UMA LARGURA MAIOR QUE A DO BODY
-- TALVEZ TENHA QUE ALTERAR AS MEDIDAS DOS CARDS NO MEDIA QUERY, POIS ESTOU ALTERANDO APENAS A QUANTIDADE DE COLUNAS*/
-
 /*-------------------------------CARDS-------------------------------*/
 .container{
     padding: 2rem 1.5rem 2rem 1rem; /*O lado direito é 5px a menos por que a scrollbar toma 5px de seu tamanho*/
@@ -156,7 +155,6 @@ hr{
     justify-items: center;
 }
 
-/*MEDIDA DOS CARDS - ACHO QUE ESTOU ERRANDO AQUI, POIS EM DETERMINADAS TELAS ELES FICAM CORTADOS, OU SEJA, MAIORES DO QUE EU QUERO*/
 .container .card{
     width: 18.75rem;
     height: 17.1875rem;
@@ -185,6 +183,7 @@ hr{
 .container .card .content .nameAnime{
     text-align: center;
     margin: 0 1rem;
+    font-size: 1.5rem;
 }
 
 .container .card .content .readMore{
@@ -219,15 +218,15 @@ footer{
 }
 
 footer h3{
-    color: var(--color-yellow-gradient)
+    color: var(--color-yellow-gradient);
 }
 
 /*-------------------------------MODAL-------------------------------*/
 /*Caixa que abriga o modal*/
 .modal-container{
     /*Ocupar toda a tela do dispositivo*/
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     min-width: 25rem;
     /*Deixar a tela com um fundo transparente escuro*/
     background: rgba(0, 0, 0, 0.5);
@@ -265,8 +264,11 @@ footer h3{
 
     width: 50%;
     height: 30%;
-
     padding: 1rem;
+}
+
+.modal-container .modal h2{
+    font-size: 1.5rem;
 }
 
 /*Botão de fechar do modal*/
@@ -283,25 +285,42 @@ footer h3{
     font-size: 1rem;
     font-weight: 900;
     
-    right: 3%;
+    right: 4%;
 }
-
-/*FAZER UM CÁLCULO PARA DEFINIR A ALTURA DO MODAL PARA CADA TAMANHO DE TELA*/
 
 .modal-container .modal .sinopse{
     text-align: justify;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
 }
 
-.modal-container .modal .btn-watch{
-    background-color: var(--color-red-gradient);
-    color: var(--color-white);
-    
+.modal-container .modal .btns{
+    display: flex;
+}
+
+.modal-container .modal .btn{
     padding: 0.5rem;
+    margin-right: 1rem;
     width: 15%;
+
+    font-size: 0.8rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.modal-container .modal .btns .btn-watch{
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.modal-container .modal .btns .btn-add-list{
+    background: var(--color-yellow-gradient);
+    color: var(--color-white);
+}
+
+.modal-container .modal .btns .btn-rm-list{
+    background-color: var(--color-red-gradient);
+    color: var(--color-white);
 }
