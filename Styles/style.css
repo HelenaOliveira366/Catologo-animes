@@ -26,7 +26,7 @@ rem - Relativo ao font-size do elemento root - do pai
 *{
     margin: 0px;
     padding: 0px;
-    border: border-box;
+    box-sizing: border-box;
 }
 
 a{
