@@ -1,38 +1,3 @@
-/*
-1rem = 16px
-*/
-
-/*
-px - Medida absoluta, não muda de acordo com as especificações do dispositivo
-em - Relativo ao tamanho da fonte do elemento - 2em = 2 vexes o tamanho do elemento
-rem - Relativo ao font-size do elemento root - do pai
-*/
-
-:root{
-    /*Variáveis*/
-    --color-yellow-gradient: #FFCA03;
-    --color-orange-gradient: #FF5403;
-    --color-red-gradient: #F90716;
-    --color-black: #000000;
-    --color-white: #ffffff;
-    --color-green: #42855B;
-    --color-background: #191A19;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-}
-
-/*Zerar as configurações padrões do CSS*/
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-a{
-    text-decoration: none;
-}
-
 body{
     width: 100%;
     height: 100%;
@@ -54,7 +19,7 @@ body{
 /*--------------------------SCROLLBAR---------------------*/
 /*Largura da área total da scrollbar*/
 ::-webkit-scrollbar{
-    width: 0.2rem;
+    width: 2px;
 }
 
 /*Cor da área de trás, sem a barra*/
@@ -71,9 +36,9 @@ body{
 body{
     background: var(--color-background);
 
-    /*Tirar o scroll do eixo X*/
-    overflow-x: hidden;
-    margin-inline: auto;
+    /*Tirar o scroll do eixo X
+    overflow-x: hidden;*/
+    margin: auto;
 }
 
 /*-------------------------------CABEÇALHO-------------------------------*/
@@ -101,7 +66,6 @@ header nav .slogan{
 }
 
 .navbar_item{
-    text-decoration: none;
     color: var(--color-yellow-gradient);
 
     padding: 0.5rem; /*0.50rem*/
@@ -112,12 +76,11 @@ header nav .slogan{
 .navbar_item:hover{
     color: var(--color-red-gradient);
     border: 2px solid var(--color-red-gradient);
+    transition: 0.2s;
 }
 
 ul{
-    padding: 1rem; /*1rem*/
-    /*Remover as bolinhas do elemento da lista*/
-    list-style: none;
+    padding: 1rem; /*16px*/
 
     /*Centralizar os itens*/
     /*Deixar os elementos da lista em uma única linha*/
@@ -156,11 +119,10 @@ hr{
 }
 
 .container .card{
-    width: 18.75rem;
-    height: 17.1875rem;
+    height: 17rem;
 
     background: white;
-    border-radius: 0.50rem;
+    border-radius: 0.5rem;
 }
 
 .container .card .image{
@@ -187,13 +149,12 @@ hr{
 }
 
 .container .card .content .readMore{
-    text-decoration: none;
     cursor: pointer;
+    color: var(--color-white);
 
+    border: none;
     border-radius: 0.5rem; /*0.50rem*/
     padding: 0.5rem;
-    color: var(--color-white);
-    border: none;
     /*Ocupa 100% da caixa "content"*/
     width: 50%;
     margin: 0.5rem 1rem;
@@ -227,7 +188,6 @@ footer h3{
     /*Ocupar toda a tela do dispositivo*/
     width: 100%;
     height: 100%;
-    min-width: 25rem;
     /*Deixar a tela com um fundo transparente escuro*/
     background: rgba(0, 0, 0, 0.5);
     /*Posicionar a caixa em toda a tela*/
@@ -267,25 +227,24 @@ footer h3{
     padding: 1rem;
 }
 
+.modal .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .modal-container .modal h2{
     font-size: 1.5rem;
 }
 
 /*Botão de fechar do modal*/
 .modal-container .modal .close-btn{
-    /*Posição absoluta é necessária para posicionar os elementos do modal corretamente*/
-    position: absolute;
-    padding: 0.5rem;
-
-    background: var(--color-white);
     border: none;
     cursor: pointer;
     
     color: var(--color-red-gradient);
-    font-size: 1rem;
     font-weight: 900;
-    
-    right: 4%;
+    font-size: 1rem;
 }
 
 .modal-container .modal .sinopse{
@@ -301,9 +260,10 @@ footer h3{
 .modal-container .modal .btn{
     padding: 0.5rem;
     margin-right: 1rem;
-    width: 15%;
 
     font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-white);
 
     display: flex;
     align-items: center;
@@ -312,15 +272,12 @@ footer h3{
 
 .modal-container .modal .btns .btn-watch{
     background-color: var(--color-green);
-    color: var(--color-white);
 }
 
 .modal-container .modal .btns .btn-add-list{
     background: var(--color-yellow-gradient);
-    color: var(--color-white);
 }
 
 .modal-container .modal .btns .btn-rm-list{
     background-color: var(--color-red-gradient);
-    color: var(--color-white);
 }

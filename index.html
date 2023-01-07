@@ -10,13 +10,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
         <!--Importação do CSS-->
-        <link rel="stylesheet" href="Styles/style.css">
+        <link rel="stylesheet" href="./Styles/style.css">
+        <link rel="stylesheet" href="./Styles/global.css">
 
         <!--Importação do JS-->
         <script src="./Scripts/scriptModal.js" defer></script>
 
         <!--Ícone da página-->
-        <link rel="icon" type="image/jpg" href="Images/GT_Gato2.jpg"/>
+        <!--<link rel="icon" type="image/jpg" href=""/>-->
         <!--Título da página -->
         <title>Catálogo de Animes</title>
     </head>
@@ -28,9 +29,9 @@
                 <!--Amo Animes: Watashi wa anime ga daisukidesu-->
                 <p class="slogan">私はアニメが大好きです</p>
                 <ul>
-                    <li><a href="" class="navbar_item">Em alta</a></li>            
-                    <li><a href="" class="navbar_item">Populares</a></li>
-                    <li><a href="" class="navbar_item">Clássicos</a></li>
+                    <li><a href="#" class="navbar_item">Em alta</a></li>            
+                    <li><a href="#" class="navbar_item">Populares</a></li>
+                    <li><a href="#" class="navbar_item">Clássicos</a></li>
                 </ul>
             </nav>
         </header>
@@ -54,13 +55,15 @@
                     <div class="modal-container">
                         <!--Campo da descrição em si-->
                         <div class="modal">
-                            <button class="close-btn" onclick="Modal.close()">X</button>
-                            <h2 class="nameAnime">Dr Stone</h2>
+                            <div class="header">
+                                <h2 class="nameAnime">Dr Stone</h2>
+                                <button class="close-btn" onclick="Modal.close()">X</button>
+                            </div>
                             <p class="sinopse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             <div class="btns">
-                                <a href="" class="btn btn-watch">Assistir</a>
-                                <a href="" class="btn btn-add-list">Adicionar</a>
-                                <a href="" class="btn btn-rm-list">Remover</a>
+                                <a href="#" class="btn btn-watch">Assistir</a>
+                                <a href="#" class="btn btn-add-list">Adicionar</a>
+                                <a href="#" class="btn btn-rm-list">Remover</a>
                             </div>
                         </div>
                     </div>
