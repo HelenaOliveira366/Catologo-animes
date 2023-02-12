@@ -103,8 +103,6 @@ hr{
 
 /*-------------------------------CARDS-------------------------------*/
 .container{
-    padding: 2rem 1.5rem 2rem 1rem; /*O lado direito é 5px a menos por que a scrollbar toma 5px de seu tamanho*/
-
     /*------GRID------*/
     /*Estruturação do layout em CSS Grid*/
     display: grid;
