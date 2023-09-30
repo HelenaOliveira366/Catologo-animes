@@ -133,6 +133,8 @@ hr{
     justify-content: center;
     align-items: center;
 
+    object-fit: cover;
+
     margin: 1rem;
 }
 
