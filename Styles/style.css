@@ -179,8 +179,12 @@ footer{
     color: var(--color-red-gradient);
 }
 
-footer h3{
-    color: var(--color-yellow-gradient);
+footer .social-media{
+    margin: 24px auto 0;
+}
+
+footer .social-media a{
+    margin: 0 24px;
 }
 
 /*-------------------------------MODAL-------------------------------*/
