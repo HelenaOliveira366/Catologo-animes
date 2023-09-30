@@ -104,7 +104,7 @@ hr{
 /*-------------------------------CARDS-------------------------------*/
 .container{
     /*Centralizar área do card com área do modal*/
-    padding: 2rem 0;
+    padding: 3rem 1rem;
     margin: auto;
     
     /*------GRID------*/
