@@ -141,6 +141,7 @@ hr{
     /*As 3 propriedades abaixo serve para deixar as imgens resposivas, ou seja, não desfocar conforme o tamanho do card aumenta ou diminui*/
     width: 16.75rem;
     height: 9.35rem;
+    object-fit: cover;
 }
 
 .container .card .content .nameAnime{
